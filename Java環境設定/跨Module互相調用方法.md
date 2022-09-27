@@ -49,6 +49,16 @@ So if bar requires transitive drink and customer requires bar, then customer can
 * ***open module[module]*** : we now have to explicitly grant permission for other modules to reflect on our classes.
 * ***opens[package]*** : If we need to allow reflection of private types, but we don't want all of our code exposed, we can use the opens directive to expose specific packages. (只允許在執行期間能存取特定套件)
 * ***opens[package] to [module]*** : We can selectively open our packages to a pre-approved list of modules, in this case, using the opens…to directive(只允許在執行期間讓指定模組能存取特定套件).
+
+### 4. 常見問題
+#### 4.1 Caused by: java.lang.module.InvalidModuleDescriptorException: Test1.class found in top-level directory (unnamed package not allowed in module)
+
+此錯誤是因為沒有把classs 定義在 package 中，只要把class 放進package即可解決
+
+#### 4.2 Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make public main1.Test1() accessible: module moduleC does not "exports main1" to module org.testng
+
+當你使用JUnit Test的時候，便有可能出現此錯誤，此錯誤是代表 "執行JUnit Test" 的module 其 "module-info.java" 少寫 exports [package] to org.testng，補上即可解決。
+
 ---
 #### Reference
 
