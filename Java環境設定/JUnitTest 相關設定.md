@@ -8,6 +8,7 @@
 - 64位元 IDEA
 
 IDEA安裝目錄下的 bin/idea64.exe.vmoptionss 最後一段添加 -Deditable.java.test.console=true
+![image-20200302140334046](../img/FkFHBGhlwkvD7j7wPFUnRCjrOHSX)
 
 - 32位元 IDEA
 
