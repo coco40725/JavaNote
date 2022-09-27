@@ -8,7 +8,8 @@
 - 64位元 IDEA
 
 IDEA安裝目錄下的 bin/idea64.exe.vmoptionss 最後一段添加 -Deditable.java.test.console=true
-![image-20200302140334046](../img/FkFHBGhlwkvD7j7wPFUnRCjrOHSX)
+
+![junit_img1](https://github.com/coco40725/JavaNote/blob/main/Java%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/img/junit_img1.png)
 
 - 32位元 IDEA
 
