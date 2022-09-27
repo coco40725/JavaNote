@@ -31,3 +31,6 @@ C:\Program Files (x86)\Common Files\Oracle\Java\javapath 需移除java.exe 等
 
 ### 6. 開啟”java設定”，點選Java --> 點選 View --> 勾選你要的版本
 <img src="https://github.com/coco40725/JavaNote/blob/main/Java%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/img/java_img4..png" width="60%" height="60%" >
+
+### 7. 於terminal 執行 java -version，檢查版本是否為正確的
+<img src="https://github.com/coco40725/JavaNote/blob/main/Java%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/img/java_img5..png" width="60%" height="60%" >
