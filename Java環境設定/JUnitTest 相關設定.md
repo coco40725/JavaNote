@@ -15,5 +15,8 @@ IDEA安裝目錄下的 bin/idea64.exe.vmoptionss 最後一段添加 -Deditable.j
 
 IDEA安裝目錄下的 bin/idea.exe.vmoptions 最後一段添加 -Deditable.java.test.console=true
 
+----
+#### Reference
+https://blog.csdn.net/a1786742005/article/details/104027352
 
 
