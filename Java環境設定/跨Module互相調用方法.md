@@ -59,6 +59,17 @@ So if bar requires transitive drink and customer requires bar, then customer can
 
 當你使用JUnit Test的時候，便有可能出現此錯誤，此錯誤是代表 "執行JUnit Test" 的module 其 "module-info.java" 少寫 exports [package] to org.testng，補上即可解決。
 
+#### 4.3 Caused by: java.lang.RuntimeException: java.lang.reflect.InaccessibleObjectException: Unable to make field private java.lang.String Test.Customer.name accessible: module statement does not "opens Test" to module DAO
+
+當你要export的package，裡面有class, method等結構，其隱私性屬於 private，則若要另其他module可以使用這類型的class的話，便必須將預暴露的module設定成open，如下:
+```java
+open module statement {
+    requires java.sql;
+    requires org.testng;
+    exports Util;
+    exports Test; // 裡面的class其屬性為private
+}
+```
 ---
 #### Reference
 
