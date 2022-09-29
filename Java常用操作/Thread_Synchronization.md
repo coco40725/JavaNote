@@ -151,8 +151,11 @@ synchronized (obj){
 ```
 3. 這三個方法其實是在 Object class中定義的
 4. sleep 與 wait的差異:
+
     a. **定義位置**: sleep是定義在 Thread class 中; wait是定義在 Object class
+    
     b. **調用的範圍**: sleep可以在任何需要的場景下調用; wait則需要被 "同步監視器" 調用，故只能在 synchronized () 或 synchronized method 中 使用
+    
     c. **是否釋放同步監視器**: sleep不釋放; wait會釋放
 
 #### 4.1 實現 Thread 1 與 Thread 2 交互print數字
