@@ -1,4 +1,4 @@
-## 下載最新Druid jar 包
+## 下載最新Druid jar 檔案
 
 ### 0. Druid github
 https://github.com/alibaba/druid
