@@ -136,7 +136,7 @@ public final class Singleton {
 ### 6. 枚舉(Enum) 【推薦】
 主要是透過Enum的性質:
 1. Enum 的Constructor 皆是 private，無法由外部new()。
-2. Enum 的memeber variable 都是 final static，即加載一次後便不會再加載，甚至不可變。
+2. Enum 的 element 都是 final static，即加載一次後便不會再加載，甚至不可變。
 
 ```java
 public enum Singleton{
@@ -173,4 +173,5 @@ public class Main{
 
 ##### Reference
 https://codingnote.cc/zh-tw/p/173410/
+
 https://blog.csdn.net/fly910905/article/details/79286680
