@@ -85,7 +85,6 @@ public final class Singleton {
 使用**volatile**特殊修飾符，參考 : [volatile](https://www.baeldung.com/java-volatile-variables-thread-safety)
 > If we declare member variable as volatile, each thread sees its latest updated value in the main memory without any delay. 
 - **優點**: 解決 Thread safety 問題，且效率也提高。
-- **缺點**: volatile 的變數如果使用頻率過高，其效率反而還會低於使用synchronized。
 
 ```java
 public final class Singleton {
