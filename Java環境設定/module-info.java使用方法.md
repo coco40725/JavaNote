@@ -64,7 +64,7 @@ So if bar requires transitive drink and customer requires bar, then customer can
 
 #### 4.3 Caused by: java.lang.RuntimeException: java.lang.reflect.InaccessibleObjectException: Unable to make field private java.lang.String Test.Customer.name accessible: module statement does not "opens Test" to module DAO
 
-當你要export的package，裡面有class, method等結構，其隱私性屬於 private，則若要另其他module可以使用這類型的class的話，便必須將預暴露的module設定成open，如下:
+當你要export的package，裡面有class, method等結構，其隱私性屬於 private，則若要使其他module可以使用這類型的class的話，便必須將欲暴露的module設定成open，如下:
 ```java
 open module statement {
     requires java.sql;
