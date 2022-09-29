@@ -110,7 +110,7 @@ public final class Singleton {
 ### 5. 靜態內部類 (Static Nested Class) 【推薦】
 類似餓漢式的寫法，但又達到了延遲加載的性質，主要是透過 Java類的加載機制來達成，
 1. Class的內部結構被JVM加載順序: static code block $\rightarrow$ main method $\rightarrow$ code block $\rightarrow$ Constructor，而內部類則是當你要執行時才會加載。
-2. static code block, memeber variable, 與 static inner class，只要加載過一次，就不會再載入。
+2. static code block, static memeber variable, 與 static inner class，只要加載過一次，就不會再載入。
 3. ClassLoader.loadClass() 屬於synchronized method。
 
 如此便同時達到 Thread sadety 與 延遲加載。
