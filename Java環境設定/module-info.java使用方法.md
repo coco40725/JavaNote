@@ -1,4 +1,7 @@
-## 使用 module-info.java 來跨module調用方法 (Java 9 的特性)
+## 使用 module-info.java (Java 9 的特性)
+### 0. module-info.java 功能
+module-info.java 可以用於宣告module間的相依性以及其公開性，因此當我們需要讓部分結構 (例如: class, method等) 是 "**跨module**" 來執行時，
+便會透過編輯module-info.java來達到此目的。
 
 ### 1. module-info.java 寫法
 ```
