@@ -7,7 +7,7 @@ https://github.com/alibaba/druid
 ### 1. 進入下載網址
 https://repo1.maven.org/maven2/com/alibaba/druid/
 
-<img src="https://img-blog.csdnimg.cn/20200928175721295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1l5allzag==,size_16,color_FFFFFF,t_70" height="50%" width="50%">
+<img src="https://github.com/coco40725/JavaNote/blob/main/JDBC%E5%B8%B8%E7%94%A8jar/Druid/img/druid_img2.png" height="50%" width="50%">
 
 ### 2. 往下滑找到最新版本，例如 1.2.9
 
