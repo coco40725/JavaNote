@@ -76,7 +76,7 @@ open module statement {
 
 #### 4.4 java: cannot access javax.naming.spi.ObjectFactory. class file for javax.naming.spi.ObjectFactory not found
 [ref](https://stackoverflow.com/questions/46488346/error32-13-error-cannot-access-referenceable-class-file-for-javax-naming-re)
-當你有使用module-info.java時，同時又有用DataSources 時，則有可能會出現此錯誤，只要將module-info.java 新增 requires java.naming; 即可解決。
+當此module有使用module-info.java，且又有用DataSources 時，則有可能會出現此錯誤，只要將module-info.java 新增 requires java.naming; 即可解決。
 
 ---
 #### Reference
