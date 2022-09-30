@@ -376,3 +376,26 @@ ld台 = [5,2,12,23,56]
 一次讀兩個byte 	&rarr; [5,2] [12,23] [56] 如此 "台"這個字會變亂碼
 
 但是! 如果你只是要做複製貼上，那麼純文字檔與非純文字檔 皆可用 InputStream/ OutputStream 進行操作
+
+---
+
+### 8. 其他
+Java 9 的新特性: 把欲關閉的流 其對象放進try, 但放進去後此對象會變成"常數"，即不可修改；若有多個流要關閉: try(reader; reader1)
+
+```java
+public static void main(String[] args) {
+        InputStreamReader reader = new InputStreamReader(System.in);
+        try (reader) {
+
+            char[] cbuff = new char[20];
+            int len;
+            if ((len = reader.read(cbuff)) != -1) {
+                String str = new String(cbuff, 0, len);
+                System.out.println(str);
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+```
