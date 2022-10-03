@@ -333,4 +333,4 @@ https://o7planning.org/10169/java-servlet
 https://cloud.google.com/appengine/docs/flexible/java/configuring-the-web-xml-deployment-descriptor
 
 
-###### tags: `Java Note` `Java 常用操作` `Servlet` `建立 Servlet`
+###### tags: `Java Note` `Java Web` `Servlet` `建立 Servlet`
