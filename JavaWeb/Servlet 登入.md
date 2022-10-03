@@ -106,4 +106,4 @@ public class LoginServlet extends HttpServlet {
 3. 網頁自動跳轉至 http://localhost:8080/WebApp1/login 並回報 success
 
 
-###### tags: `Java Note` `Java 常用操作` `Servlet` `Servlet登入`
+###### tags: `Java Note` `Java Web` `Servlet` `Servlet登入`
