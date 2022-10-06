@@ -373,7 +373,24 @@ public class NewInstanceTest {
 ```
 ---
 
-### 7. 練習
+### 7. 如何透過 Reflection 獲得 某個Class中的泛型 並實例化，例如: BaseDAO< T> ，裡面的T如何獲得並實例化?
+
+問題: 想要得到 BaseDAO< T> 中裡面的 T，並轉換成Class< T> 這個類型 再實例化
+```java
+   public abstract class BaseDAO < T> {
+     {
+        Type genericSuperclass = this.getClass().getGenericSuperclass();
+        ParameterizedType paramType = (ParameterizedType) genericSuperclass;
+        Type[] typeArguments = paramType.getActualTypeArguments(); // 獲取父類泛型參數
+        clazz = (Class<T>)typeArguments[0];
+    }
+    
+}
+```
+
+---
+
+### 8. 練習
 ```java
 public class ReflectionTest {
     @Test
