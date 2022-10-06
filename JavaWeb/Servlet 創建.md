@@ -138,7 +138,7 @@ This annotation is processed by the container at deployment time, and the corres
 
 <img src="https://github.com/coco40725/JavaNote/blob/main/Java%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/img/servletU5.png?raw=true" height="50%" width="50%">
 
-#### 5. 將欲使用的 Library 放置 lib並載入
+#### 5. 將欲使用的 Library 放置 lib並載入 (servlet api 位在 Tomcat lib 資料夾內)
 
 <img src="https://github.com/coco40725/JavaNote/blob/main/Java%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/img/servletU6.png?raw=true" height="50%" width="50%">
 
