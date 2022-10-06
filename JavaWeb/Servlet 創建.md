@@ -178,7 +178,7 @@ public class ServletTest1 extends HttpServlet {
 
 <img src="https://github.com/coco40725/JavaNote/blob/main/Java%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/img/servletU8.png?raw=true" height="50%" width="50%">
 
-將 Project 名字填入 Application context，例如: /Test，這裡沒設定好會一直出現404錯誤。
+這裡是設定根目錄，依個人需求填寫，本範例是將 Project 名字填入 Application context，例如: /Test，注意!這裡沒設定好會一直出現404錯誤。
 
 <img src="https://github.com/coco40725/JavaNote/blob/main/Java%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/img/servletU9.png?raw=true" height="50%" width="50%">
 
