@@ -99,8 +99,24 @@ public class LoginServlet extends HttpServlet {
 </web-app>
 
 ```
+---
 
-### 3. 測試
+### 3. Servlet 與 HTML 相對路徑
+* .html
+
+這裡的 action 可以寫成
+
+    - 絕對路徑 : http://localhost:8080/WebApp1/logbin
+    
+    - 相對路徑 : ./addSer
+    
+  這裡的的根路徑: http://localhost:8080/WebApp1
+
+* web.xml
+
+這裡的 url-pattern 必須寫成相對路徑，且不包含 "." 
+
+### 4. 測試
 1. 點開 login.html
 2. 輸入 帳號: admin / 密碼: 123 
 3. 網頁自動跳轉至 http://localhost:8080/WebApp1/login 並回報 success
