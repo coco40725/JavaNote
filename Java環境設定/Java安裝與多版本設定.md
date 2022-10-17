@@ -25,9 +25,12 @@ C:\Program Files (x86)\Common Files\Oracle\Java\javapath 需移除java.exe 等
 ### 4. 於 "系統變數" 建立 JAVA_HOME，值則填入 欲使用的JAVA版本路徑
 <img src="https://github.com/coco40725/JavaNote/blob/main/Java%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/img/java_img2..png" width="60%" height="60%" >
 
+### (Optional) 於 "系統變數" 建立 classpath，值則填入.;
+這樣設定的好處在於，如果你後面使用 terminal 來 執行 .class檔時，可以不用指定 -classpath
 
 ### 5. 於 "系統變數"的PATH加入 %JAVA_HOME%\bin，須至頂
 <img src="https://github.com/coco40725/JavaNote/blob/main/Java%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/img/java_img3..png" width="60%" height="60%" >
+
 
 ### 6. 開啟”java設定”，點選Java --> 點選 View --> 勾選你要的版本
 <img src="https://github.com/coco40725/JavaNote/blob/main/Java%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/img/java_img4..png" width="60%" height="60%" >
