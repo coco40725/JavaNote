@@ -119,7 +119,6 @@ class MyinvocationHandler implements InvocationHandler{
         // 代理類對象所調用method，而 我們實質是調用  被代理類對象(obj)的method
        Object returnValue = method.invoke(obj,args);
 
-        util.method2();
        return returnValue;
     }
 }
