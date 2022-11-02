@@ -116,9 +116,6 @@ class MyinvocationHandler implements InvocationHandler{
     // 將 被代理類 要執行的方法A，聲明在 invoke() 中
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        HumanUtil util = new HumanUtil();
-
-        util.method1();
         // 代理類對象所調用method，而 我們實質是調用  被代理類對象(obj)的method
        Object returnValue = method.invoke(obj,args);
 
