@@ -28,7 +28,7 @@ Dynamic content 是根據使用者特定的因素 (例如造訪時間、位置�
 </servlet-mapping>
 ```
 一般container的default servlet 可以處理 request of static contents，然而DispatcherServlet 不具該功能，進而會出現以下情況:
-client send request of static contents --> 被 DispatcherServlet 搶先攔截，但又無法處理 --> 出現``[WARN] cannot find handler method``
+client send request of static contents --> 被 DispatcherServlet 搶先攔截，但又無法處理 --> 出現``[WARN] cannot find handler method`` --> 404 錯誤
 
 為了避免這種情況，有以下兩種解決方案:
 #### 2.1 mvc:default-servlet-handler/
