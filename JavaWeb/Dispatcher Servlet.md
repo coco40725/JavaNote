@@ -2,6 +2,9 @@
 In Spring MVC, all incoming requests go through a single servlet. This servlet - DispatcherServlet - is the front controller.
 The job of the DispatcherServlet is to take an incoming URI and find the right combination of handlers (generally methods on Controller classes). 
 (去找這個request 對應到 @Controller上的哪個 method)
+> Class DispatcherServlet: 
+Dispatches to registered handlers for processing a web request, providing convenient mapping and exception handling facilities.
+[doc](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/DispatcherServlet.html)
 
 <img src="https://jeromejaglale.com/wiki/lib/exe/fetch.php?w=&h=&cache=cache&media=java:spring:spring_mvc.png">
 
@@ -19,7 +22,7 @@ Dynamic content 是根據使用者特定的因素 (例如造訪時間、位置�
 <img src="https://www.cloudflare.com/resources/images/slt3lc6tev37/6ijRQV6QxiyG4zyidpgJmi/23088f026f5b01cd671274b9b994096f/caching-dynamic-content.svg" width=60%>
 
 ### 2. Dispatcher Servlet 攔截 static contents 的問題
-一般我們在替 DispatcherServlet servlet 文件會寫成 ``<url-pattern>/</url-pattern>``，以達到攔截所有 request，然而，這樣的寫法卻會與 container 本身的 default servlet 造成衝突，以 tomcat 為例子:
+一般我們在替 DispatcherServlet servlet 文件會寫成 ``<url-pattern>/</url-pattern>``，使其作為 default servlet 以處理"幾乎全部"的request，然而，這樣的寫法卻會與 container 本身的 default servlet 造成衝突，以 tomcat 為例子:
 檔案``conf/web.xml``，其中有一段:
 ```xml
 <servlet-mapping>
@@ -27,8 +30,8 @@ Dynamic content 是根據使用者特定的因素 (例如造訪時間、位置�
     <url-pattern>/</url-pattern>
 </servlet-mapping>
 ```
-一般container的default servlet 可以處理 request of static contents，然而DispatcherServlet 不具該功能，進而會出現以下情況:
-client send request of static contents --> 被 DispatcherServlet 搶先攔截，但又無法處理 --> 出現``[WARN] cannot find handler method`` --> 404 錯誤
+一般container的default servlet 可以處理request of static contents ，然而 DispatcherServlet 卻找不到對應的方法來處理這個request (因為你根本沒寫)，進而會出現以下情況:
+client send request of static contents --> 被 DispatcherServlet 搶先攔截 (因為自定義的 default servlet 優先度會高於container本身的default servlet)，但找不到對應的方法處理 --> 出現``[WARN] cannot find handler method`` --> 404 錯誤
 
 為了避免這種情況，有以下兩種解決方案:
 #### 2.1 mvc:default-servlet-handler/
@@ -49,7 +52,7 @@ mapping 表示對該資源的 request，如: /static/xx.jpg 或 /static/uu.html
 
 
 ### 3. The difference between "/" and "/*"
-當 DispatcherServlet 設定為``<url-pattern>/</url-pattern>``，會攔截所有 request of static contents，但不包含 .jsp，相反地，若是設定成 ``<url-pattern>/*</url-pattern>`` 則會攔截所有 request，包含 .jsp。
+當 DispatcherServlet 設定為``<url-pattern>/</url-pattern>``，會作為 default servlet 攔截所有 request (除了 .jsp 與 .jspx)，相反地，若是設定成 ``<url-pattern>/*</url-pattern>`` 則會攔截所有 request，包含 .jsp 與 .jspx。
 
 
 
