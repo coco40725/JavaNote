@@ -48,6 +48,9 @@ mapping 表示對該資源的 request，如: /static/xx.jpg 或 /static/uu.html
 ```
 
 
+### 3. The difference between "/" and "/*"
+當 DispatcherServlet 設定為``<url-pattern>/</url-pattern>``，會攔截所有 request of static contents，但不包含 .jsp，相反地，若是設定成 ``<url-pattern>/*</url-pattern>`` 則會攔截所有 request，包含 .jsp。
+
 
 
 #### reference
