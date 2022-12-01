@@ -199,6 +199,15 @@ if (instance != null){
 ```
 但由於instance沒有初始化完全，因此會導致程式出錯。
 
+### 6. Synchronized and volatile
+大部分的情況下，擇一即可，兩者的目的都是要讓 multiple thread 得到 consistent value，但採用不同的做法。
+* volatile 是透過 memory barrier，保證特定code不進行指令重排，並使的更新的變數"立刻"存到main memory，
+使其他的thread可以"得到最新的value"。
+
+* Synchronized 則是可以透過其他方法讓thread之間知道"最新的value是多少"，不需要動用 main memory。
+>synchronized ensures you have a consistent view of the data. This means you will read the latest value and other caches will get the latest value. Caches are smart enough to talk to each other via a special bus (not something required by the JLS, but allowed) This bus means that it doesn't have to touch main memory to get a consistent view.
+
+https://stackoverflow.com/questions/11733632/synchronized-data-read-write-to-from-main-memory
 #### Reference
 https://blog.csdn.net/u013309870/article/details/73088852 
 
