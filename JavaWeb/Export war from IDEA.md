@@ -5,19 +5,23 @@
 
 ### 2. 將sources code 加進 pox.xml 中
 ``` xml
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-war-plugin</artifactId>
-    <version>3.3.2</version>
-    <configuration>
-        <webResources>
-            <resource>
-                <directory>${project.build.sourceDirectory}</directory>
-                <targetPath>WEB-INF/classes</targetPath>
-            </resource>
-        </webResources>
-    </configuration>
-</plugin>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <webResources>
+                        <resource>
+                            <directory>${project.build.sourceDirectory}</directory>
+                            <targetPath>WEB-INF/classes</targetPath>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 ```
 
