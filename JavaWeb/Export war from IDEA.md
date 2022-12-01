@@ -3,7 +3,7 @@
 `` <packaging>war</packaging>``
 
 
-### 2. 將sources code 加進 webapp 中
+### 2. 將sources code 加進 pox.xml 中
 ``` xml
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
