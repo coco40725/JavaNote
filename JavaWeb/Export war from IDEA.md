@@ -3,7 +3,8 @@
 `` <packaging>war</packaging>``
 
 
-### 2. 將sources code 加進 pox.xml 中
+### 2. 將sources code 加進 war 中
+在 ``pox.xml`` 中添加此code
 ``` xml
     <build>
         <plugins>
