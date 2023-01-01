@@ -50,6 +50,22 @@ mapping 表示對該資源的 request，如: /static/xx.jpg 或 /static/uu.html
 <mvc:resources mapping="/static/**" location="static/"/>
 ```
 
+總結來說，為了讓 request 正確地讓 controller 處理，
+`springMVC.xml` 需要有以下兩段
+```xml
+<!--
+<mvc:annotation-driven>會自動注冊 RequestMappingHandlerMapping  與 RequestMappingHandlerAdapter 兩個Bean,這是Spring MVC為
+@Controller分發請求所必需的，並且提供了數據綁定支持
+-->
+<mvc:annotation-driven/>
+
+<mvc:default-servlet-handler/>
+
+
+<!--    掃描 bean -->
+<context:component-scan base-package="mvc.controller"/>
+```
+
 
 ### 3. The difference between "/" and "/*"
 當 DispatcherServlet 設定為``<url-pattern>/</url-pattern>``，會作為 default servlet 攔截所有 request (除了 .jsp 與 .jspx)，相反地，若是設定成 ``<url-pattern>/*</url-pattern>`` 則會攔截所有 request，包含 .jsp 與 .jspx。
